@@ -743,6 +743,7 @@
 
     // --- Chat Submission Engine (Gemini) ---
     async function handleChatSubmit(e) {
+      const apiUrl = "https://script.google.com/macros/s/AKfycbxQJSv40rTPD6Xt2-i9trA5jkCzYH-8LxP85LcDEoogUcauzxqjW_RIE-qNBzTzB6ju/exec";
       e.preventDefault();
       if (isGenerating) return;
 
@@ -898,6 +899,7 @@
 
 </body>
 </html>
+<script>
 // 填入你剛剛從 GAS 複製的網址 (結尾是 /exec)
 const GAS_URL = "https://script.google.com/macros/s/AKfycbxQJSv40rTPD6Xt2-i9trA5jkCzYH-8LxP85LcDEoogUcauzxqjW_RIE-qNBzTzB6ju/exec";
 
