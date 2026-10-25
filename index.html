@@ -899,68 +899,18 @@
 
 </body>
 </html>
+// 這裡必須換成你 GAS 部署出來的 Web App URL (結尾是 /exec)
+const GAS_URL = "https://script.google.com/macros/s/AKfycbzdBzHxRl7f5Qy4vvVIM8p-lo2sUXY6BuqkZq9ue2sJlmNTcw8WXqFZrcYVNtWGxEuaQA/exec"; 
 
-<div>
-  <h2>AI 助理</h2>
-
-  <textarea
-    id="prompt"
-    maxlength="1000"
-    placeholder="輸入你想問 AI 的問題"
-    rows="4"
-    style="width:100%;max-width:500px;"
-  ></textarea>
-
-  <br><br>
-
-  <button id="askButton" onclick="askAI()">送出問題</button>
-
-  <p id="status"></p>
-  <pre id="answer" style="white-space:pre-wrap;"></pre>
-</div>
-
-<script>
-async function askAI() {
-  const prompt = document.getElementById("prompt").value.trim();
-  const status = document.getElementById("status");
-  const answer = document.getElementById("answer");
-  const button = document.getElementById("askButton");
-
-  if (!prompt || prompt.length > 1000) {
-    status.textContent = "請輸入問題（最多 1000 字元）。";
-    return;
-  }
-
-  button.disabled = true;
-  status.textContent = "AI 思考中……";
-  answer.textContent = "";
-
-  try {
-    const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbzdBzHxRl7f5Qy4vvVIM8p-lo2sUXY6BuqkZq9ue2sJlmNTcw8WXqFZrcYVNtWGxEuaQA/exec",
-      {
-        method: "POST",
+try {
+    const response = await fetch(GAS_URL, {
+        method: 'POST',
+        // GAS 必須接收 text/plain 才能避免 CORS 錯誤
         headers: {
-          "Content-Type": "text/plain;charset=utf-8"
+            'Content-Type': 'text/plain;charset=utf-8', 
         },
-        body: JSON.stringify({ prompt })
-      }
-    );
+        body: JSON.stringify({ prompt: fullPrompt }), 
+        redirect: 'follow' 
+    });
 
-    const data = await response.json();
-
-    if (!data.ok) {
-      throw new Error(data.error || "請求失敗");
-    }
-
-    answer.textContent = data.answer;
-    status.textContent = "完成";
-  } catch (error) {
-    status.textContent =
-      "呼叫失敗。請檢查部署網址、權限或瀏覽器主控台。";
-    console.error(error);
-  } finally {
-    button.disabled = false;
-  }
-}
-</script>
+    // ... 下面的處理邏輯
