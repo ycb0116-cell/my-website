@@ -765,7 +765,6 @@
       showTyping(true);
 
       try {
-        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
         const payload = {
           systemInstruction: { parts: [{ text: systemPrompt }] },
           contents: chatHistory
@@ -899,18 +898,75 @@
 
 </body>
 </html>
-// 這裡必須換成你 GAS 部署出來的 Web App URL (結尾是 /exec)
-const GAS_URL = "https://script.google.com/macros/s/AKfycbzdBzHxRl7f5Qy4vvVIM8p-lo2sUXY6BuqkZq9ue2sJlmNTcw8WXqFZrcYVNtWGxEuaQA/exec"; 
 
-try {
-    const response = await fetch(GAS_URL, {
-        method: 'POST',
-        // GAS 必須接收 text/plain 才能避免 CORS 錯誤
+<div>
+  <h2>AI 助理</h2>
+
+  <textarea
+    id="prompt"
+    maxlength="1000"
+    placeholder="輸入你想問 AI 的問題"
+    rows="4"
+    style="width:100%;max-width:500px;"
+  ></textarea>
+
+  <br><br>
+
+  <button id="askButton" onclick="askAI()">送出問題</button>
+
+  <p id="status"></p>
+  <pre id="answer" style="white-space:pre-wrap;"></pre>
+</div>
+
+<script>
+
+async function askAI() {
+  const prompt = document.getElementById("prompt").value.trim();
+  const status = document.getElementById("status");
+  const answer = document.getElementById("answer");
+  const button = document.getElementById("askButton");
+
+  if (!prompt || prompt.length > 1000) {
+    status.textContent = "請輸入問題，最多 1000 字元。";
+    return;
+  }
+
+  button.disabled = true;
+  status.textContent = "AI 思考中……";
+  answer.textContent = "";
+
+  try {
+    const response = await fetch(
+      "https://script.google.com/macros/s/AKfycbzdBzHxRl7f5Qy4vvVIM8p-lo2sUXY6BuqkZq9ue2sJlmNTcw8WXqFZrcYVNtWGxEuaQA/exec",
+      {
+        method: "POST",
         headers: {
-            'Content-Type': 'text/plain;charset=utf-8', 
+          "Content-Type": "text/plain;charset=utf-8"
         },
-        body: JSON.stringify({ prompt: fullPrompt }), 
-        redirect: 'follow' 
-    });
+        body: JSON.stringify({
+          prompt: prompt
+        })
+      }
+    );
 
-    // ... 下面的處理邏輯
+    if (!response.ok) {
+      throw new Error("HTTP " + response.status);
+    }
+
+    const data = await response.json();
+
+    if (!data.ok) {
+      throw new Error(data.error || "AI 請求失敗");
+    }
+
+    answer.textContent = data.answer;
+    status.textContent = "完成";
+
+  } catch (error) {
+    console.error("AI request error:", error);
+    status.textContent =
+      "連線失敗，請檢查 Apps Script 部署或跨來源設定。";
+  } finally {
+    button.disabled = false;
+  }
+}
