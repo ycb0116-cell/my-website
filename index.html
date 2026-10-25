@@ -773,7 +773,7 @@
                 'Content-Type': 'text/plain;charset=utf-8' 
             },
             // 這裡將你的 query 變數打包傳給 GAS
-            body: JSON.stringify({ prompt: query }), 
+            body: JSON.stringify({history: chatHistory }), 
             // 【關鍵2】GAS 需要允許轉址
             redirect: 'follow' 
         });
