@@ -122,7 +122,7 @@
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
             <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
           </span>
-          <span>系統即時運作中</span>
+          <span>Gemini AI 運作中</span>
         </div>
         <button id="reset-session-btn" onclick="resetChatSession()" title="重新諮詢" class="hidden text-xs px-3 py-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-indigo-300 border border-indigo-500/30 transition shadow-sm">
           <i class="fa-solid fa-rotate-right mr-1"></i> 重置診斷
@@ -137,35 +137,35 @@
       
       <!-- High-Tech Mascot Card -->
       <div class="relative group cursor-pointer" onclick="switchView('workspace')">
-        <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-3xl blur-xl opacity-50 group-hover:opacity-100 transition duration-1000 animate-glow-pulse"></div>
+        <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-cyan-500 to-emerald-500 rounded-3xl blur-xl opacity-50 group-hover:opacity-100 transition duration-1000 animate-glow-pulse"></div>
         
         <div class="relative w-64 h-64 sm:w-72 sm:h-72 rounded-3xl glass-panel border border-indigo-400/40 p-6 flex flex-col items-center justify-center shadow-2xl overflow-hidden transform group-hover:scale-[1.03] transition duration-500">
           
           <div class="absolute inset-0 opacity-20 flex items-center justify-center">
             <svg class="w-full h-full animate-spin-slow" viewBox="0 0 200 200">
               <circle cx="100" cy="100" r="85" stroke="#6366F1" stroke-width="1.5" fill="none" stroke-dasharray="10 8" />
-              <circle cx="100" cy="100" r="65" stroke="#10B981" stroke-width="1" fill="none" stroke-dasharray="6 6" />
+              <circle cx="100" cy="100" r="65" stroke="#00E676" stroke-width="1" fill="none" stroke-dasharray="6 6" />
             </svg>
           </div>
 
           <!-- Mascot Icon -->
           <div class="relative z-10 w-32 h-32 mb-3 animate-float flex items-center justify-center">
-            <svg viewBox="0 0 120 120" class="w-full h-full drop-shadow-[0_0_20px_rgba(99,102,241,0.5)]">
-              <polygon points="60,10 105,32 105,88 60,110 15,88 15,32" fill="url(#hero-grad)" stroke="#8B5CF6" stroke-width="2"/>
-              <path d="M40 40 L80 80 M80 40 L40 80" stroke="#10B981" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+            <svg viewBox="0 0 120 120" class="w-full h-full drop-shadow-[0_0_20px_rgba(0,242,254,0.5)]">
+              <polygon points="60,10 105,32 105,88 60,110 15,88 15,32" fill="url(#hero-grad)" stroke="#00F2FE" stroke-width="2"/>
+              <path d="M40 40 L80 80 M80 40 L40 80" stroke="#00E676" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
               <circle cx="60" cy="60" r="16" fill="#0B0F19" stroke="#6366F1" stroke-width="2"/>
-              <path d="M52 60 L57 60 L60 52 L64 68 L66 60 L70 60" stroke="#10B981" stroke-width="2" fill="none"/>
+              <path d="M52 60 L57 60 L60 52 L64 68 L66 60 L70 60" stroke="#00E676" stroke-width="2" fill="none"/>
               <defs>
                 <linearGradient id="hero-grad" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#1E1B4B" stop-opacity="0.95"/>
-                  <stop offset="100%" stop-color="#4C1D95" stop-opacity="0.6"/>
+                  <stop offset="0%" stop-color="#080C14" stop-opacity="0.95"/>
+                  <stop offset="100%" stop-color="#1A2B4C" stop-opacity="0.6"/>
                 </linearGradient>
               </defs>
             </svg>
           </div>
 
-          <div class="z-10 bg-indigo-500/20 border border-indigo-400/50 text-indigo-300 text-xs px-3 py-1 rounded-full font-semibold flex items-center gap-1.5 backdrop-blur-sm">
-            <i class="fa-solid fa-robot text-emerald-400"></i> AI 運動防護助理
+          <div class="z-10 bg-cyan-900/40 border border-cyan-400/50 text-cyan-300 text-xs px-3 py-1 rounded-full font-semibold flex items-center gap-1.5 backdrop-blur-sm">
+            <i class="fa-solid fa-sparkles text-amber-300"></i> Gemini API 驅動
           </div>
         </div>
       </div>
@@ -176,13 +176,13 @@
           您的專屬 AI 運動防護與恢復隨身助理
         </h1>
         <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-          5步驟漸進式問答診斷 <span class="text-indigo-400 font-semibold">· 肌貼圖解與張力指引</span> <span class="text-emerald-400 font-semibold">· 伸展放鬆計時</span> <span class="text-purple-400 font-semibold">· 狀態準備度量表</span>
+          全方位 AI 對話診斷 <span class="text-cyan-400 font-semibold">· 肌貼圖解與張力指引</span> <span class="text-emerald-400 font-semibold">· 伸展放鬆計時</span> <span class="text-purple-400 font-semibold">· 狀態準備度量表</span>
         </p>
       </div>
 
       <!-- CTA Button -->
       <div>
-        <button onclick="switchView('workspace')" class="group relative inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-extrabold text-lg glow-purple hover:scale-105 active:scale-95 transition-all duration-300">
+        <button onclick="switchView('workspace')" class="group relative inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 via-indigo-500 to-purple-500 text-white font-extrabold text-lg glow-purple hover:scale-105 active:scale-95 transition-all duration-300">
           <span>開始體驗</span>
           <i class="fa-solid fa-arrow-right text-base group-hover:translate-x-1 transition-transform"></i>
         </button>
@@ -191,16 +191,16 @@
       <!-- Feature Badges -->
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs text-slate-400 pt-6 border-t border-slate-800/80 w-full max-w-3xl">
         <div class="flex items-center justify-center gap-1.5 py-2 glass-pill rounded-xl border border-indigo-500/20">
-          <i class="fa-solid fa-comments text-indigo-400"></i> 漸進式 5 題診斷
+          <i class="fa-solid fa-brain text-indigo-400"></i> AI 智慧追問分析
         </div>
-        <div class="flex items-center justify-center gap-1.5 py-2 glass-pill rounded-xl border border-purple-500/20">
-          <i class="fa-solid fa-tape text-purple-400"></i> 肌貼圖解教學
+        <div class="flex items-center justify-center gap-1.5 py-2 glass-pill rounded-xl border border-cyan-500/20">
+          <i class="fa-solid fa-tape text-cyan-400"></i> 隨時呼叫肌貼教學
         </div>
         <div class="flex items-center justify-center gap-1.5 py-2 glass-pill rounded-xl border border-emerald-500/20">
           <i class="fa-solid fa-stopwatch text-emerald-400"></i> 放鬆伸展計時器
         </div>
-        <div class="flex items-center justify-center gap-1.5 py-2 glass-pill rounded-xl border border-cyan-500/20">
-          <i class="fa-solid fa-gauge-high text-cyan-400"></i> 準備度評估量表
+        <div class="flex items-center justify-center gap-1.5 py-2 glass-pill rounded-xl border border-purple-500/20">
+          <i class="fa-solid fa-gauge-high text-purple-400"></i> 準備度評估量表
         </div>
       </div>
 
@@ -215,7 +215,7 @@
     <div class="glass-panel rounded-2xl p-2 overflow-x-auto scrollbar-none border border-indigo-500/20">
       <div class="flex items-center gap-2 min-w-[600px] sm:min-w-0" id="tab-buttons">
         <button onclick="switchTab('chat')" id="tab-btn-chat" class="tab-btn flex-1 py-3 px-4 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 text-indigo-300 bg-indigo-950/60 border border-indigo-400/40 shadow-sm transition duration-300">
-          <i class="fa-solid fa-comments text-base"></i> 漸進式對話診斷
+          <i class="fa-solid fa-comments text-base"></i> 智慧 AI 診斷
         </button>
         <button onclick="switchTab('taping')" id="tab-btn-taping" class="tab-btn flex-1 py-3 px-4 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 text-slate-400 hover:text-white transition duration-300">
           <i class="fa-solid fa-tape text-base"></i> 肌貼圖解資料庫
@@ -229,33 +229,24 @@
       </div>
     </div>
 
-    <!-- TAB 1: PROGRESSIVE AI DIAGNOSTIC CHAT -->
+    <!-- TAB 1: AI DIAGNOSTIC CHAT -->
     <section id="tab-content-chat" class="tab-pane flex-1 flex flex-col glass-panel rounded-3xl border border-indigo-500/20 overflow-hidden min-h-[580px]">
       
       <!-- Chat Header -->
       <div class="px-6 py-4 bg-slate-900/90 border-b border-slate-800 flex items-center justify-between">
         <div class="flex items-center gap-3">
           <div class="relative">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center text-white font-bold">
-              <i class="fa-solid fa-robot"></i>
+            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-cyan-500 to-indigo-500 flex items-center justify-center text-white font-bold">
+              <i class="fa-solid fa-brain"></i>
             </div>
             <span class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-400 border-2 border-slate-900 rounded-full"></span>
           </div>
           <div>
             <div class="font-bold text-sm text-slate-100 flex items-center gap-2">
-              AI 防護助理
-              <span id="chat-mode-badge" class="text-[10px] font-mono px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 border border-indigo-500/40">5步驟診斷模式</span>
+              Gemini 防護助理
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/40">動態評估模式</span>
             </div>
-            <div class="text-xs text-slate-400">請按提示逐步回答問題以進行防護評估</div>
-          </div>
-        </div>
-
-        <div class="flex flex-col items-end gap-1">
-          <span id="question-progress-badge" class="text-xs font-semibold text-indigo-300 bg-indigo-950/60 px-3 py-1 rounded-full border border-indigo-800">
-            問題 1 / 5
-          </span>
-          <div class="w-28 bg-slate-800 h-1.5 rounded-full overflow-hidden">
-            <div id="progress-bar" class="bg-gradient-to-r from-indigo-500 to-purple-500 h-full w-1/5 transition-all duration-300"></div>
+            <div class="text-xs text-slate-400">請描述您任何部位的不適，或直接詢問貼紮方式</div>
           </div>
         </div>
       </div>
@@ -267,10 +258,10 @@
             <i class="fa-solid fa-robot"></i>
           </div>
           <div class="glass-panel rounded-2xl p-4 text-sm text-slate-200 border-indigo-500/20 leading-relaxed shadow-md space-y-2">
-            <p>你好！我是你的 <strong>AI 運動防護隨身助理</strong> 👋</p>
+            <p>你好！我是由 Gemini 驅動的 <strong>AI 運動防護隨身助理</strong> 👋</p>
             <p class="text-xs text-slate-300">
-              為了為你提供精準的運動防護與處置建議，我們將進行 <strong>5 個簡短問題</strong>。<br>
-              <strong>【問題 1/5】</strong> 請問你目前感到不適或緊繃的身體部位在哪裡？（例如：腳踝、膝蓋前側、肩膀、小腿等）
+              您可以告訴我您<strong>任何身體部位</strong>的不適狀況（例如：手腕扭到、下背痠痛、大腿拉傷），我會透過簡單的問答來了解情況並給出建議。<br><br>
+              若您想直接學習貼紮，也可以直接說：<strong class="text-cyan-300">「怎麼貼肌貼？」</strong>
             </p>
           </div>
         </div>
@@ -278,40 +269,40 @@
 
       <!-- Typing Indicator -->
       <div id="typing-indicator" class="hidden px-6 py-2 flex items-center gap-2 text-xs text-slate-400">
-        <i class="fa-solid fa-robot text-indigo-400"></i>
-        <span>AI 防護員分析中</span>
+        <i class="fa-solid fa-brain text-cyan-400"></i>
+        <span>AI 防護員思考中</span>
         <div class="flex space-x-1 items-center">
-          <div class="w-1.5 h-1.5 bg-indigo-400 rounded-full animate-bounce"></div>
-          <div class="w-1.5 h-1.5 bg-purple-400 rounded-full animate-bounce [animation-delay:0.2s]"></div>
-          <div class="w-1.5 h-1.5 bg-pink-400 rounded-full animate-bounce [animation-delay:0.4s]"></div>
+          <div class="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-bounce"></div>
+          <div class="w-1.5 h-1.5 bg-indigo-400 rounded-full animate-bounce [animation-delay:0.2s]"></div>
+          <div class="w-1.5 h-1.5 bg-purple-400 rounded-full animate-bounce [animation-delay:0.4s]"></div>
         </div>
       </div>
 
       <!-- Quick Prompt Chips -->
       <div class="px-4 py-2 bg-slate-900/60 border-t border-slate-800 flex items-center gap-2 overflow-x-auto scrollbar-none">
         <span class="text-[11px] text-slate-400 whitespace-nowrap"><i class="fa-solid fa-bolt text-amber-400"></i> 快速輸入:</span>
-        <button onclick="useQuickPrompt('右腳踝外側')" class="text-xs px-3 py-1 rounded-full glass-pill hover:bg-indigo-500/20 text-slate-300 hover:text-indigo-300 whitespace-nowrap transition border border-slate-700">
-          右腳踝外側
+        <button onclick="useQuickPrompt('肌貼怎麼貼')" class="text-xs px-3 py-1 rounded-full glass-pill hover:bg-indigo-500/20 text-slate-300 hover:text-indigo-300 whitespace-nowrap transition border border-slate-700">
+          肌貼怎麼貼
         </button>
-        <button onclick="useQuickPrompt('膝蓋前側髕骨周圍')" class="text-xs px-3 py-1 rounded-full glass-pill hover:bg-purple-500/20 text-slate-300 hover:text-purple-300 whitespace-nowrap transition border border-slate-700">
-          膝蓋前側髕骨周圍
+        <button onclick="useQuickPrompt('肩膀不舒服可以重訓嗎')" class="text-xs px-3 py-1 rounded-full glass-pill hover:bg-cyan-500/20 text-slate-300 hover:text-cyan-300 whitespace-nowrap transition border border-slate-700">
+          肩膀不舒服可以重訓嗎
         </button>
-        <button onclick="useQuickPrompt('肩膀肌肉緊繃')" class="text-xs px-3 py-1 rounded-full glass-pill hover:bg-emerald-500/20 text-slate-300 hover:text-emerald-300 whitespace-nowrap transition border border-slate-700">
-          肩膀肌肉緊繃
+        <button onclick="useQuickPrompt('腳踝扭到可以打球嗎')" class="text-xs px-3 py-1 rounded-full glass-pill hover:bg-emerald-500/20 text-slate-300 hover:text-emerald-300 whitespace-nowrap transition border border-slate-700">
+          腳踝扭到可以打球嗎
         </button>
       </div>
 
       <!-- Input Form -->
       <form id="chat-form" onsubmit="handleChatSubmit(event)" class="p-3 sm:p-4 bg-slate-900 border-t border-slate-800 flex items-center gap-2">
-        <input id="chat-input" type="text" placeholder="輸入回答內容..." class="flex-1 bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-100 placeholder-slate-400 focus:outline-none focus:border-indigo-400 transition">
-        <button type="submit" class="px-5 py-3 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-bold text-sm hover:opacity-90 active:scale-95 transition flex items-center gap-2 shadow-lg">
+        <input id="chat-input" type="text" placeholder="描述您的狀況或詢問貼紮方式..." class="flex-1 bg-slate-800/80 border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-100 placeholder-slate-400 focus:outline-none focus:border-cyan-400 transition" required>
+        <button type="submit" id="chat-submit-btn" class="px-5 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-500 text-white font-bold text-sm hover:opacity-90 active:scale-95 transition flex items-center gap-2 shadow-lg">
           <span>發送</span>
           <i class="fa-solid fa-paper-plane text-xs"></i>
         </button>
       </form>
     </section>
 
-    <!-- TAB 2: TAPING VISUAL LIBRARY -->
+    <!-- TAB 2: TAPING VISUAL LIBRARY (Unchanged structure) -->
     <section id="tab-content-taping" class="tab-pane hidden space-y-6">
       <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
@@ -323,7 +314,6 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        
         <!-- Ankle Card -->
         <div class="glass-panel rounded-2xl p-5 hover:border-indigo-400/50 transition duration-300 flex flex-col justify-between">
           <div class="space-y-4">
@@ -519,7 +509,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -595,7 +584,7 @@
   <!-- Footer -->
   <footer class="glass-panel border-t border-slate-800 py-4 px-4 text-center text-xs text-slate-500 mt-8">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
-      <div>© 2026 AI 運動防護隨身助理 · Sports Protection Assistant</div>
+      <div>© 2026 AI 運動防護隨身助理 · Sports Protection Assistant (Gemini Powered)</div>
       <div class="flex gap-4 text-slate-400">
         <span>非醫療診斷系統</span>
         <span>運動前請充分暖身</span>
@@ -603,25 +592,26 @@
     </div>
   </footer>
 
-  <!-- App Script Engine -->
+  <!-- App Script Engine (Gemini Integration) -->
   <script>
-    // Progressive 5-Step Diagnostic State Tracking
-    let currentStep = 1;
-    const maxSteps = 5;
-    let userAnswers = {};
-    let timerIntervals = {};
-    let timerCounts = { 1: 30, 2: 30, 3: 30 };
+    // --- Gemini API Setup ---
+    const apiKey = ""; // API key is injected by the environment
+    let chatHistory = [];
+    let isGenerating = false;
 
-    // Diagnostic Questions Database
-    const diagnosticQuestions = [
-      { step: 1, text: "【問題 1/5】請問您目前感到不適或緊繃的身體部位在哪裡？（如：腳踝、膝蓋前側、肩膀、小腿等）" },
-      { step: 2, text: "【問題 2/5】請問這是在進行什麼運動後出現的？（如：跑步、籃球、羽球、重訓等）" },
-      { step: 3, text: "【問題 3/5】請問該部位目前主要感受為何？（例如：肌肉緊繃僵硬、微酸感、活動受限等）" },
-      { step: 4, text: "【問題 4/5】請問這狀況持續了多久？（例如：剛運動完、1-2天內、長期慢性）" },
-      { step: 5, text: "【問題 5/5】最後，請評估該不適感對您日常或活動的影響程度（輕微/中等/較明顯）？" }
-    ];
+    const systemPrompt = `
+      你是「運動防護隨身助理」。主要功能是提供運動適宜性評估、防護貼紮與運動後放鬆建議。
+      
+      【重要指導原則】
+      1. 遇到身體任何部位不適的詢問（如手腕、下背、脖子、髖關節等），請循序漸進反問關鍵細節（如痛多久、如何受傷、活動是否受限等），一次問一個問題，最多追問 5 次。
+      2. 當收集夠多資訊或滿 5 次後，給予具體的防護、貼紮或拉伸建議。
+      3. 若使用者直接詢問「怎麼貼肌貼」、「肌貼貼法」或「教學」，請跳過追問，直接提供條理分明的圖文或步驟教學。
+      4. 嚴格限制在「運動防護、肌肉骨骼系統」主題。遇到無關問題（如寫程式、食譜、數學等）請客氣且明確拒絕。
+      5. 【安全守則】若使用者提及「劇烈疼痛」、「刺痛」、「紅腫」、「無法負重」等嚴重警訊，務必在回答中強烈建議立即就醫，並提醒暫停運動。
+      6. 使用繁體中文，每次回答控制在 150 字以內，語氣專業、友善且具同理心。
+    `;
 
-    // View Switching
+    // --- View Switching ---
     function switchView(viewName) {
       const hero = document.getElementById('hero-view');
       const workspace = document.getElementById('workspace-view');
@@ -650,7 +640,7 @@
       }
     }
 
-    // Tab Switch
+    // --- Tab Switch ---
     function switchTab(tabId) {
       document.querySelectorAll('.tab-pane').forEach(p => p.classList.add('hidden'));
       const target = document.getElementById(`tab-content-${tabId}`);
@@ -668,7 +658,7 @@
       }
     }
 
-    // Modal Alert
+    // --- Modal Alert ---
     function showAlertModal(title, body) {
       document.getElementById('modal-title').innerText = title;
       document.getElementById('modal-body').innerText = body;
@@ -679,101 +669,44 @@
     }
 
     function useQuickPrompt(text) {
+      if (isGenerating) return;
       const input = document.getElementById('chat-input');
       input.value = text;
       handleChatSubmit(new Event('submit'));
     }
 
-    // Chat Submission Engine
-    function handleChatSubmit(e) {
-      e.preventDefault();
-      const input = document.getElementById('chat-input');
-      const query = input.value.trim();
-      if (!query) return;
-
-      appendMessage('user', query);
-      input.value = '';
-
-      // Safety Guardrail: Check for acute pain keywords
-      if (query.includes('疼痛') || query.includes('劇痛') || query.includes('刺痛')) {
-        setTimeout(() => {
-          showAlertModal(
-            '⚠️ 急性不適與疼痛警示 Warning',
-            '檢測到您的訊息包含「疼痛」或強烈不適感！請立即停止運動，採取冰敷並休息。若發腫或無法正常負重，請至醫院或物理治療所尋求專業診斷。'
-          );
-          appendMessage('ai', '⚠️ **防護警示**：您提及了顯著疼痛，建議**立即停止高強度運動**並尋求專業醫療檢測！');
-        }, 400);
-        return;
-      }
-
-      // Domain Guardrail: First question sports scope check
-      const sportsKeywords = ['腳踝', '膝蓋', '肩膀', '肌肉', '貼紮', '拉伸', '痠', '緊繃', '慢跑', '深蹲', '籃球', '跑步', '運動', '肌貼', '羽球', '訓練', '恢復', '足底', '小腿'];
-      const isSportsRelated = sportsKeywords.some(kw => query.includes(kw));
-
-      if (currentStep === 1 && !isSportsRelated) {
-        showTyping(true);
-        setTimeout(() => {
-          showTyping(false);
-          appendMessage('ai', '我是專注於運動防護與肌貼貼紮的隨身助理 ⚡，請輸入與**運動防護、肌肉緊繃或運動後恢復**相關的部位問題喔！');
-        }, 500);
-        return;
-      }
-
-      // Save step answer
-      userAnswers[`step_${currentStep}`] = query;
-
-      showTyping(true);
-      setTimeout(() => {
-        showTyping(false);
-        processProgressiveChat();
-      }, 600);
+    // --- Format AI Markdown ---
+    function formatText(text) {
+      return text
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.*?)\*/g, '<em>$1</em>')
+        .replace(/\n/g, '<br>');
     }
 
-    // Dynamic 5-Step Process Engine
-    function processProgressiveChat() {
-      if (currentStep < maxSteps) {
-        currentStep++;
-        const qObj = diagnosticQuestions.find(q => q.step === currentStep);
-        appendMessage('ai', qObj.text);
-        updateProgressUI(currentStep);
-      } else {
-        // Formulate final diagnostic summary report
-        const location = userAnswers['step_1'] || '該部位';
-        const sport = userAnswers['step_2'] || '運動';
-        const feeling = userAnswers['step_3'] || '不適感';
-        
-        appendMessage('ai', `
-          🎉 <strong>5 步驟評估完畢！診斷報告如下：</strong><br><br>
-          1. <strong>部位與狀況</strong>：${sport}後引起之 <strong>${location}</strong> (${feeling})。<br>
-          2. <strong>防護建議</strong>：非急性紅腫狀況下，建議運動前進行 15-25% 輕張力肌貼包覆；運動後作 30 秒靜態伸展。<br>
-          3. <strong>快速功能切換</strong>：您可點擊上方頁籤使用【肌貼圖解資料庫】或【放鬆伸展與計時】！
-        `);
-        updateProgressUI(maxSteps, true);
-      }
-    }
-
-    function appendMessage(sender, htmlText) {
+    // --- UI Chat Helpers ---
+    function appendMessage(sender, text) {
       const container = document.getElementById('chat-messages');
       const isUser = sender === 'user';
-
       const msgDiv = document.createElement('div');
+      
       msgDiv.className = `flex gap-3 items-start ${isUser ? 'justify-end' : ''} max-w-2xl ${isUser ? 'ml-auto' : ''}`;
 
       if (!isUser) {
+        const formattedHtml = formatText(text);
         msgDiv.innerHTML = `
-          <div class="w-8 h-8 rounded-full bg-indigo-500/20 border border-indigo-400/40 flex-shrink-0 flex items-center justify-center text-indigo-400 text-xs">
-            <i class="fa-solid fa-robot"></i>
+          <div class="w-8 h-8 rounded-full bg-cyan-500/20 border border-cyan-400/40 flex-shrink-0 flex items-center justify-center text-cyan-400 text-xs">
+            <i class="fa-solid fa-brain"></i>
           </div>
           <div class="glass-panel rounded-2xl p-4 text-sm text-slate-200 border-indigo-500/20 leading-relaxed shadow-md">
-            ${htmlText}
+            ${formattedHtml}
           </div>
         `;
       } else {
         msgDiv.innerHTML = `
-          <div class="bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl p-4 text-sm text-white font-semibold leading-relaxed shadow-md">
-            ${htmlText}
+          <div class="bg-gradient-to-r from-cyan-600 to-indigo-600 rounded-2xl p-4 text-sm text-white font-semibold leading-relaxed shadow-md">
+            ${text}
           </div>
-          <div class="w-8 h-8 rounded-full bg-purple-500/20 border border-purple-400/40 flex-shrink-0 flex items-center justify-center text-purple-300 text-xs font-bold">
+          <div class="w-8 h-8 rounded-full bg-indigo-500/20 border border-indigo-400/40 flex-shrink-0 flex items-center justify-center text-indigo-300 text-xs font-bold">
             YOU
           </div>
         `;
@@ -785,45 +718,105 @@
 
     function showTyping(show) {
       const indicator = document.getElementById('typing-indicator');
-      if (show) indicator.classList.remove('hidden');
-      else indicator.classList.add('hidden');
+      const submitBtn = document.getElementById('chat-submit-btn');
+      const input = document.getElementById('chat-input');
+      
+      if (show) {
+        indicator.classList.remove('hidden');
+        submitBtn.disabled = true;
+        submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+        input.disabled = true;
+        isGenerating = true;
+        
+        // Auto-scroll to typing indicator
+        const container = document.getElementById('chat-messages');
+        container.scrollTop = container.scrollHeight;
+      } else {
+        indicator.classList.add('hidden');
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+        input.disabled = false;
+        input.focus();
+        isGenerating = false;
+      }
     }
 
-    function updateProgressUI(step, completed = false) {
-      const badge = document.getElementById('question-progress-badge');
-      const bar = document.getElementById('progress-bar');
+    // --- Chat Submission Engine (Gemini) ---
+    async function handleChatSubmit(e) {
+      e.preventDefault();
+      if (isGenerating) return;
 
-      if (completed) {
-        badge.innerText = "診斷已完成";
-        badge.className = "text-xs font-semibold text-emerald-400 bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-800";
-        bar.style.width = "100%";
-      } else {
-        badge.innerText = `問題 ${step} / 5`;
-        bar.style.width = `${(step / 5) * 100}%`;
+      const input = document.getElementById('chat-input');
+      const query = input.value.trim();
+      if (!query) return;
+
+      appendMessage('user', query);
+      chatHistory.push({ role: "user", parts: [{ text: query }] });
+      input.value = '';
+
+      // Safety Guardrail Trigger: Check for acute pain keywords
+      if (query.includes('疼痛') || query.includes('劇痛') || query.includes('刺痛')) {
+        showAlertModal(
+          '⚠️ 急性不適與疼痛警示',
+          '系統檢測到您的訊息包含強烈不適感！請立即停止運動，採取冰敷並休息。若發腫或無法正常負重，請至醫院或物理治療所尋求專業診斷。'
+        );
+      }
+
+      showTyping(true);
+
+      try {
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+        const payload = {
+          systemInstruction: { parts: [{ text: systemPrompt }] },
+          contents: chatHistory
+        };
+
+        const response = await fetch(apiUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+        
+        if (result.candidates && result.candidates.length > 0) {
+          const aiResponseText = result.candidates[0].content.parts[0].text;
+          chatHistory.push({ role: "model", parts: [{ text: aiResponseText }] });
+          appendMessage('ai', aiResponseText);
+        } else {
+          appendMessage('ai', "連線發生異常，請稍後再試。");
+        }
+      } catch (error) {
+        console.error("API Error:", error);
+        appendMessage('ai', "連線發生錯誤，請確認網路環境或 API 金鑰設置。");
+      } finally {
+        showTyping(false);
       }
     }
 
     function resetChatSession() {
-      currentStep = 1;
-      userAnswers = {};
-      updateProgressUI(1);
+      if (isGenerating) return;
+      chatHistory = [];
       document.getElementById('chat-messages').innerHTML = `
         <div class="flex gap-3 items-start max-w-2xl">
-          <div class="w-8 h-8 rounded-full bg-indigo-500/20 border border-indigo-400/40 flex-shrink-0 flex items-center justify-center text-indigo-400 text-xs">
-            <i class="fa-solid fa-robot"></i>
+          <div class="w-8 h-8 rounded-full bg-cyan-500/20 border border-cyan-400/40 flex-shrink-0 flex items-center justify-center text-cyan-400 text-xs">
+            <i class="fa-solid fa-brain"></i>
           </div>
           <div class="glass-panel rounded-2xl p-4 text-sm text-slate-200 border-indigo-500/20 leading-relaxed shadow-md space-y-2">
-            <p>你好！我是你的 <strong>AI 運動防護隨身助理</strong> 👋</p>
+            <p>你好！我是由 Gemini 驅動的 <strong>AI 運動防護隨身助理</strong> 👋</p>
             <p class="text-xs text-slate-300">
-              為了為你提供精準的運動防護與處置建議，我們將進行 <strong>5 個簡短問題</strong>。<br>
-              <strong>【問題 1/5】</strong> 請問你目前感到不適或緊繃的身體部位在哪裡？（例如：腳踝、膝蓋前側、肩膀、小腿等）
+              您可以告訴我您<strong>任何身體部位</strong>的不適狀況（例如：手腕扭到、下背痠痛、大腿拉傷），我會透過簡單的問答來了解情況並給出建議。<br><br>
+              若您想直接學習貼紮，也可以直接說：<strong class="text-cyan-300">「怎麼貼肌貼？」</strong>
             </p>
           </div>
         </div>
       `;
     }
 
-    // Stretch Timer Logic
+    // --- Stretch Timer Logic ---
+    let timerIntervals = {};
+    let timerCounts = { 1: 30, 2: 30, 3: 30 };
+
     function startStretchTimer(id) {
       if (timerIntervals[id]) clearInterval(timerIntervals[id]);
       timerCounts[id] = 30;
@@ -864,7 +857,7 @@
       } catch (e) {}
     }
 
-    // Readiness Score Calculator
+    // --- Readiness Score Calculator ---
     function updateReadinessScore() {
       const fatigue = parseInt(document.getElementById('slider-fatigue').value);
       const soreness = parseInt(document.getElementById('slider-soreness').value);
