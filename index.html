@@ -765,34 +765,46 @@
 
       showTyping(true);
 
-      try {
-        const payload = {
-          systemInstruction: { parts: [{ text: systemPrompt }] },
-          contents: chatHistory
-        };
-
+   try {
         const response = await fetch(apiUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
+            method: 'POST',
+            // 【最重要的地方】必須是 text/plain，否則一定會報 CORS 錯誤
+            headers: {
+                'Content-Type': 'text/plain;charset=utf-8' 
+            },
+            // 這裡將你的 query 變數打包傳給 GAS
+            body: JSON.stringify({ prompt: query }), 
+            // 【關鍵2】GAS 需要允許轉址
+            redirect: 'follow' 
         });
 
-        const result = await response.json();
-        
-        if (result.candidates && result.candidates.length > 0) {
-          const aiResponseText = result.candidates[0].content.parts[0].text;
-          chatHistory.push({ role: "model", parts: [{ text: aiResponseText }] });
-          appendMessage('ai', aiResponseText);
-        } else {
-          appendMessage('ai', "連線發生異常，請稍後再試。");
+        if (!response.ok) {
+            throw new Error("網路請求失敗狀態碼：" + response.status);
         }
-      } catch (error) {
+
+        // 解析 GAS 回傳的 JSON 資料
+        const data = await response.json();
+        
+        // 隱藏「AI 思考中...」的動畫
+        showTyping(false); 
+
+        if (data.success) {
+            // 成功取得 AI 回應，顯示在畫面上並加入歷史紀錄
+            const aiText = data.text;
+            appendMessage('ai', aiText);
+            chatHistory.push({ role: "model", parts: [{ text: aiText }] });
+        } else {
+            throw new Error(data.error || "GAS 後端發生未知錯誤");
+        }
+
+    } catch (error) {
         console.error("API Error:", error);
-        appendMessage('ai', "連線發生錯誤，請確認網路環境或 API 金鑰設置。");
-      } finally {
         showTyping(false);
-      }
+        appendMessage('ai', "連線發生錯誤，請確認網路環境或 API 金鑰設置。");
+    } finally {
+        isGenerating = false; // 解除鎖定，讓使用者可以再次發問
     }
+}
 
     function resetChatSession() {
       if (isGenerating) return;
